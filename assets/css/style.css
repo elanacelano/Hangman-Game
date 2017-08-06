@@ -57,7 +57,22 @@ p{
   
 }
 
-#alphabet li {
+#alphabet li   { float: left;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    width: 35px;
+    height: 45px;
+    padding-top: 10px;
+    background: #525050;
+    color: #c1d72e;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border: solid 1px #fff;
+}
+/*#alphabet li {
   float:left;
   margin: 0 10px 10px 0;
   list-style:none;
@@ -75,7 +90,7 @@ p{
       border: solid 1px $white;
       color:$white;
     }
-}
+}*/
 
 .jumbotron {
   background-color: #525050;
