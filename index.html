@@ -1,54 +1,172 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Hangman Game</title>
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=latin-ext,vietnamese" rel="stylesheet"
-  />  
-  </head>
-  <body>
- <h1><center>Hangman Game</center></h1>
- <h2><center>Can you guess the word?</center></h2>
- <h2></h2>
- <div class id="hangManLetters">
-    <a id="a">A</a>
-    <a id="b">B</a>
-    <a id="c">C</a>
-    <a id="d">D</a>
-    <a id="e">E</a>
-    <a id="f">F</a>
-    <a id="g">G</a>
-    <a id="h">H</a>
-    <a id="i">I</a>
-    <a id="j">J</a>
-    <a id="k">K</a>
-    <a id="l">L</a>
-    <a id="m">M</a>
-        <br>
-    <a id="n">N</a>
-    <a id="o">O</a>
-    <a id="p">P</a>
-    <a id="q">Q</a>
-    <a id="r">R</a>
-    <a id="s">S</a>
-    <a id="t">T</a>
-    <a id="u">U</a>
-    <a id="v">V</a>
-    <a id="w">W</a>
-    <a id="x">X</a>
-    <a id="y">Y</a>
-    <a id="z">Z</a>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Hangman!</title>
+
+  <!-- We link our html to the Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+
+  <!-- connection with mine-->
+<!--   <link rel="stylesheet" href="style.css" href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+ -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="./assets/javascript/hangmanGame.js">
+
+<!--   <link rel="stylesheet" type="text/css" href="../assets/css/style.css"> -->
+<style>
+
+</style>
+
+<body>
+
+  <!-- Container Div -->
+  <div class="container">
+
+    <!-- Section 1: Navbar-->
+    <nav class="navbar navbar-default">
+
+      <!-- Place Fluid Container in Navbar -->
+      <div class="container-fluid">
+
+        <!-- Designate a navbar heading -->
+        <div class="navbar-header col-sm-3"><h1>Coding Hangman</h1></div>
+
+        <div class="col-sm-9"><h3>can you guess the word from coding class?</h3></div>
+
+          <!-- Collapsible button -->
+<!--           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+ -->
+
+          <!-- Our brand / logo -->
+          <a class="navbar-brand"></a>
+        </div>
+		</div>
+		</div>
+		</div>
+		</div>
+        <!-- The links of our navbar -->
+      <!--   <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li> -->
+
+            <!-- a Dropdown menu -->
+    <!--         <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul> -->
+
+    <!-- Jumbotron element -->
+    <div class="jumbotron wrapper">
+    	<div id="buttons">
+    		<ul id="alphabet">
+    			<li id="letter">a</li>
+    			<li id="letter">b</li>
+    			<li id="letter">c</li>
+    			<li id="letter">d</li>    	
+    			<li id="letter">e</li>
+    			<li id="letter">f</li>
+    			<li id="letter">g</li>
+    			<li id="letter">h</li>
+    			<li id="letter">i</li>
+    			<li id="letter">j</li>
+    			<li id="letter">k</li>
+    			<li id="letter">l</li>
+    			<li id="letter">m</li>
+    			<li id="letter">n</li>
+    			<li id="letter">o</li>
+    			<li id="letter">p</li>
+    			<li id="letter">q</li>
+    			<li id="letter">r</li>
+    			<li id="letter">s</li>
+    			<li id="letter">t</li>
+    			<li id="letter">u</li>
+    			<li id="letter">v</li>    
+    			<li id="letter">w</li> 
+    			<li id="letter">x</li>    
+    			<li id="letter">y</li>
+    			<li id="letter">z</li>
+			</ul>
+		</div>
+	</div>	
+
+		<div id="name">
+	</div>
+
+		<p id="categoryName"></p>
+	</div>
+
+		<div id="hold">
+			<ul id="myWord">	
+				<li class="guess">_</li>
+				<li class="guess">_</li>
+				<li class="guess">_</li>
+				<li class="guess">_</li>
+				<li class="guess">_</li>
+			</ul>
+		</div>
+
+
+
+
+
+
+
+
+      <!-- centered text -->
+<!--       <h1 class="text-center"></h1>
+      <h2 class="text-center">CODING MASTER</h2>
+      <h3 class="text-center">Extraordinaire</h3> -->
+
+
+
+    <!-- a Bootstrap row with columns -->
+    <div class="row">
+
+      <!-- At large+ screens takes up half width (6/12) -->
+      <div class="col-lg-6">
+
+        <!-- centered image with thumbnail rules -->
+        <!-- MY IMAGE IS IN THERE -->
+        <!-- <img class="IMG_6823.jpg" src="Bootcamp/" alt="KidComputer" width="250px" height="250px">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, molestiae modi accusantium animi magnam veniam, impedit asperiores sint consequuntur debitis fugit quibusdam dolor, iusto sed porro ab minus voluptatibus amet.</p>
+      </div> -->
+
+      <!-- At large+ screens takes up half width (6/12) -->
+      <div class="col-lg-6">
+<!--         <img class="img thumbnail center-block" src="https://download.unsplash.com/photo-1429051883746-afd9d56fbdaf" alt="LittleCoder" width="60%">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, maiores, quos. At, animi, facilis. Alias itaque ab minima rerum, eaque animi nesciunt harum nemo est cumque voluptas, qui reprehenderit atque.</p> -->
+      </div>
     </div>
-<!--     <div id="hangmanletters"></div>
-    <textarea type="text" onkeypress="this.value=this.value + 'onkeypress '"></textarea><br/>
-    <textarea type="text" onkeydown="this.value=this.value + 'onkeydown '" ></textarea><br/>
-    <textarea type="text" onkeyup="this.value=this.value + 'onkeyup '" ></textarea><br/> -->
-    <br>
-    <br>
-    <br>
-      <script src="assets/javascript/script.js"></script>
-<!--           <button center class="btn btn-default btn-lg dropdown-toggle" id="myBtn" type="button" aria-haspopup="true" aria-expanded="false">
-          </button> -->
-  </body>  
+  </div>
+
+  <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<div>
+	 <footer>
+                <div class="container">
+                  &copy; 2017 Elana Celano
+                </div>
+            </footer>
+</body>
 </html>
+

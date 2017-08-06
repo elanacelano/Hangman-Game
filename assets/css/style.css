@@ -1,140 +1,132 @@
-* {
-  box-sizing: border-box;
-  text-align: center;
-}
 
 body {
-    background:url("../images/fish.jpg");
-/*    margin:40px;
-    padding:70px;*/
-
+  background:lightgreen;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  color:white;
+  height:100%;
+  text-align:center;
+  font-size:18px;
+}
+#alphabet:after {
+  color: #525050;
+  content: "";
+  display: table;
+  clear: both;
 }
 
-#center {
-    text-decoration-color: #ffffff;
+.wrappper{
+  @include clear;
+  width:100%;
+  margin:0 auto;
 }
 
-a: link {
-    text-decoration: none;
-    color: #777;
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100px;
+  text-transform: uppercase;
+   margin-top: 5px 0;
+   margin-bottom: 5px;
 }
-#header {
-    width: 100%;
-    background-color: #ffffff;
-    overflow: auto;
-    border-style: none none solid none;
-    border-bottom-color: #cccccc;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    color: #777777;
-}
-aside {
-    float: left;
-    width: 30%;
-    margin-left: 150px;
-    padding: 10px;
-    background-color: #4aaaa5;
-    color: #ffffff;
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 28px;
-}
-nav {
-    font-size: 18px;
-    padding: 16px;
-}
-#section-left {
-    float: left;
-    background-color: #ffffff;
-    overflow: auto;
-    width: 50%;
-    height: 530px;
-    margin-left: 50px; 
-    border: 1px solid #dddddd;
-    padding: 10px;
-}
+
 h1 {
-    font-family:  'Roboto Mono', monospace;
-    font-size: 80px;
-    color: #ffffff;
-    text-shadow: 2px 2px #ff0000;
+  font-size: 2.6em;
+  color: #525050;
+  margin-bottom: 15%;
 }
-h2 {
-    font-family: 'Roboto Mono', monospace;
-    float: top;
-    text-align: left;
-    font-size: 26px;
-    border-style: none none solid none;
-    border-bottom-color: #cccccc;
-    color: #4aaaa5;
-    background-color: #ffffff;
-}
-h3 {
-   font-family: 'Roboto Mono', monospace;
-    font-size: 50px;
-    color: #ffffff;
-    text-shadow:2px 2px #ff0000; 
-}
-p {
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 40px;
-    color: #ffffff;
-    text-shadow: 2px 2px #ff0000;    
-}
-button {
-    background-color: #4aaaa5;
-    color: #ffffff;
-    font-size: 14px;
-    font-family: 'Roboto Mono', monospace;
-    padding: 20px;
-    text-align: left;
-    float: left;
-}
-#section-right {
-    float: left;
-    width: 20%;
-    margin-left: 80px;
-    background-color: #ffffff;
-}
-h3 {
-    font-family: 'Roboto Mono', monospace;
-    border-style: none none solid none;
-    border-bottom-color: #cccccc;
-    color: #4aaaa5;
-    font-size: 18px;
-}
-div {
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Roboto Mono', monospace;   
-    color: #ffffff;
-    text-shadow: 2px 2px #ff0000; 
-}
-footer {
-    background-color: #666666;
-    padding: 20px;
-    clear: both;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 15px;
-    color: #ffffff;
-    border-style: solid none none none;
-    border-top-color: #4aaaa5;
-    border-width: 8px;
-}
-.TextWrap{
-    float: left;
-    margin: 0px 10px 10px 10px;
-}
-.social-icons{
-    list-style-type:none;
-}
-.social-icons li{
-    display:inline;
-}
-.social-icons li img{
-    width:20%;
-}
-.winner {
 
+h2 {
+  font-size: 1.6em;
+  width: 100%;
+  padding-top: inherit;
+  padding-bottom: 40%;
 }
+
+h3 {
+  margin-top: 7%;
+  color: #525050;
+}
+
+p{
+  font-size: 1.6em;
+}
+.container-fluid {
+    background: #E5F9BD;
+}
+
+.myWord {
+  
+}
+
+#alphabet li {
+  float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:35px;
+  height:30px;
+  padding-top:10px;
+  background:$white;
+  color:$base-color;
+  cursor:pointer;
+  @include corners(5px);
+  border: solid 1px $white;
+    
+    &:hover{
+      background:color;
+      border: solid 1px $white;
+      color:$white;
+    }
+}
+
+.jumbotron {
+  background-color: #525050;
+/*  background: #E5F9BD;*/
+}
+
+.li {
+  position: float-left;
+}
+
+.myWord-li {
+  
+}
+
+footer {
+  position: /*inherit,*/ fixed;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  background-color: #525050;
+  text-align: center
+  padding: 16rem;
+}
+/*@media (max-width: 767px) {
+  #alphabet li {
+      float: left;
+      margin-top: 0px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      list-style-type: none;
+      list-style-position: initial;
+      list-style-image: initial; 
+      width: 35px;
+      height: 30px;
+      padding-top: 10px;
+      background-color: blue;
+      background-image: initial:
+      background-position-x: initial;
+      background-position-y: initial;
+      background-size: initial;
+      background-repeat-x: initial;
+      background-repeat-y: initial;
+      background-attachment: initial;
+      background-origin: initial;
+      background-clip: initial;*/
+/*      background-color: white;*/
+/*background: #E5F9BD;
+  color: #c1d72e;
+  cursor: pointer;
+  border: solid 1px #fff;    
+  padding:0 0 0 15px;
+}
+  }*/
