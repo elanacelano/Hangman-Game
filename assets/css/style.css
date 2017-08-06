@@ -114,7 +114,7 @@ footer {
   text-align: center
   padding: 16rem;
 }
-/*@media (max-width: 767px) {
+  @media (max-width: 767px) {
   #alphabet li {
       float: left;
       margin-top: 0px;
@@ -136,12 +136,12 @@ footer {
       background-repeat-y: initial;
       background-attachment: initial;
       background-origin: initial;
-      background-clip: initial;*/
-/*      background-color: white;*/
-/*background: #E5F9BD;
+      background-clip: initial;
+        background-color: white;
+  background: #E5F9BD;
   color: #c1d72e;
   cursor: pointer;
   border: solid 1px #fff;    
   padding:0 0 0 15px;
-}
-  }*/
+  }
+  }
